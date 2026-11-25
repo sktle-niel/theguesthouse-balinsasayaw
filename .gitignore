@@ -1,0 +1,18 @@
+# Design tooling and review captures (local only)
+.impeccable/
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+
+# Build and deploy artifacts
+*.zip
+node_modules/
