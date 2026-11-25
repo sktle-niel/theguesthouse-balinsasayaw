@@ -1,0 +1,463 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>The Guesthouse by Balinsasayaw · Puerto Princesa, Palawan</title>
+  <meta name="description" content="Clean, air-conditioned rooms on PEO Road, Bancao-Bancao, Puerto Princesa City, Palawan. By Balinsasayaw, home of the nipa huts over the water. Send a booking request in a minute.">
+  <meta name="theme-color" content="#6aabe4">
+  <meta property="og:title" content="The Guesthouse by Balinsasayaw">
+  <meta property="og:description" content="Clean, air-conditioned rooms in Puerto Princesa, by Balinsasayaw, home of the nipa huts over the water.">
+  <meta property="og:image" content="assets/img/hero-balinsasayaw.jpg">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300..700&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="assets/img/hero-balinsasayaw.jpg">
+  <link rel="stylesheet" href="css/style.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LodgingBusiness",
+    "name": "The Guesthouse by Balinsasayaw",
+    "telephone": "+639998846076",
+    "email": "theguesthouse.balinsasayaw2026@gmail.com",
+    "image": "assets/img/hero-balinsasayaw.jpg",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "PEO Road, Bancao-Bancao",
+      "addressLocality": "Puerto Princesa City",
+      "addressRegion": "Palawan",
+      "postalCode": "5300",
+      "addressCountry": "PH"
+    }
+  }
+  </script>
+</head>
+<body>
+  <a class="skip" href="#book">Skip to booking</a>
+
+  <header class="site-header" id="top">
+    <div class="header-inner">
+      <a class="brand" href="#top" aria-label="The Guesthouse by Balinsasayaw, home">
+        <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><path d="M3 16 16 5l13 11" /><path d="M7 14v12h18V14" /><path d="M13 26v-6h6v6" /></svg>
+        <span class="brand-text"><strong>The Guesthouse</strong><small>by Balinsasayaw</small></span>
+      </a>
+
+      <nav class="nav" id="site-nav" aria-label="Main">
+        <ul>
+          <li><a href="#rooms">Rooms</a></li>
+          <li class="nav-book"><a href="#book">Book a stay</a></li>
+          <li><a href="#dining">Dining</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#location">Location</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <time class="today" id="today" datetime=""></time>
+        <a class="btn btn-ink btn-sm header-book" href="#book">Book a stay</a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+          <span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-frame">
+        <img class="hero-img" src="assets/img/hero-balinsasayaw.jpg" width="1606" height="876"
+             alt="Nipa-roofed huts and a bamboo boardwalk over the water at the Balinsasayaw restaurant, under a clear blue sky">
+        <div class="hero-copy">
+          <h1 id="hero-title">A quiet stay by the water in Puerto Princesa</h1>
+          <p>Clean, air-conditioned rooms on PEO Road, Bancao-Bancao. By Balinsasayaw, home of the nipa huts over the water.</p>
+        </div>
+
+        <form class="quickbook" id="quickbook" novalidate aria-label="Check dates">
+          <label class="qb-field">
+            <span>Check-in</span>
+            <input type="date" name="checkin" id="qb-in" required>
+          </label>
+          <label class="qb-field">
+            <span>Check-out</span>
+            <input type="date" name="checkout" id="qb-out" required>
+          </label>
+          <label class="qb-field">
+            <span>Guests</span>
+            <select name="guests" id="qb-guests">
+              <option value="1">1 guest</option>
+              <option value="2" selected>2 guests</option>
+              <option value="3">3 guests</option>
+              <option value="4">4 guests</option>
+              <option value="5">5+ guests</option>
+            </select>
+          </label>
+          <button class="btn btn-ink qb-submit" type="submit">
+            Check availability
+            <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h12M11 5l5 5-5 5" /></svg>
+          </button>
+          <p class="qb-error" id="qb-error" role="alert"></p>
+          <p class="qb-live" id="qb-live"></p>
+        </form>
+
+        <a class="explore" href="#about">
+          <span>Explore</span>
+          <span class="explore-dot"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 4v12M5 11l5 5 5-5" /></svg></span>
+        </a>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about" id="about" aria-label="About the guesthouse">
+      <div class="container about-grid">
+        <p class="tag">The Guesthouse</p>
+        <div>
+          <p class="statement">
+            Tucked along PEO Road in Bancao-Bancao, The Guesthouse is a calm, clean place to rest between island days, <span class="muted">with dinner waiting at the Balinsasayaw huts on the water.</span>
+          </p>
+
+          <ul class="amenities" aria-label="In the rooms">
+            <li>
+              <span class="amenity-icon"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 4v24M5.6 10l20.8 12M5.6 22 26.4 10" /><path d="m12.5 5.5 3.5 3 3.5-3M12.5 26.5l3.5-3 3.5 3" /></svg></span>
+              <span>Air-conditioned rooms</span>
+            </li>
+            <li>
+              <span class="amenity-icon"><svg viewBox="0 0 32 32" aria-hidden="true"><rect x="6" y="9" width="20" height="7" rx="3.5" /><rect x="8" y="16" width="16" height="7" rx="3.5" /><path d="M10 12.5h12" /></svg></span>
+              <span>Fresh linens &amp; towels</span>
+            </li>
+            <li>
+              <span class="amenity-icon"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M13 4h6v3l2 3v17a1 1 0 0 1-1 1h-8a1 1 0 0 1-1-1V10l2-3Z" /><path d="M11 15h10M11 21h10" /></svg></span>
+              <span>Bottled water</span>
+            </li>
+            <li>
+              <span class="amenity-icon"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M9 12h12l-1.5 14h-9Z" /><path d="M21 15h2.5a2.5 2.5 0 0 1 0 5H20.5" /><path d="M12 8c0-2 2-2 2-4M16 8c0-2 2-2 2-4" /></svg></span>
+              <span>Fridge &amp; kettle in select rooms</span>
+            </li>
+            <li>
+              <span class="amenity-icon"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M4 15 16 6l12 9Z" /><path d="M8 15v9M24 15v9M16 15v9" /><path d="M3 27c2.2 0 2.2-1.5 4.3-1.5S9.6 27 11.8 27s2.2-1.5 4.2-1.5S18.3 27 20.5 27s2.1-1.5 4.2-1.5S27 27 29 27" /></svg></span>
+              <span>Restaurant over the water</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ROOMS -->
+    <section class="rooms" id="rooms" aria-labelledby="rooms-title">
+      <div class="container">
+        <div class="section-head split">
+          <div>
+            <h2 id="rooms-title">Rooms to come home to</h2>
+            <p>White linens, hardwood furniture and local art. Air-conditioned, quiet and kept spotless.</p>
+          </div>
+          <a class="link-arrow" href="#book">Request a room
+            <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h12M11 5l5 5-5 5" /></svg></a>
+        </div>
+
+        <div class="room-list">
+          <article class="room">
+            <button class="room-photo" type="button" data-gallery="twin" aria-label="View Twin Room photos (3)">
+              <img src="assets/img/twin-room-sm.jpg" width="900" height="675" loading="lazy" alt="Twin Room with two single beds, wooden headboards and patterned pillows">
+              <span class="photo-overlay" aria-hidden="true"><span class="po-count"><svg viewBox="0 0 20 20" aria-hidden="true"><rect x="2.5" y="5.5" width="15" height="11" rx="2.5" /><path d="M7 5.5 8.2 3.5h3.6L13 5.5" /><rect x="7.2" y="8.2" width="5.6" height="5.6" rx="2.8" /></svg>View 3 photos</span><span class="po-zoom"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M12 3.5h4.5V8M8 16.5H3.5V12M16.5 3.5 11.5 8.5M3.5 16.5l5-5" /></svg></span></span>
+            </button>
+            <div class="room-body">
+              <div class="room-meta"><span>2 single beds</span><span>Aircon</span></div>
+              <h3>Twin Room</h3>
+              <p>Two single beds with their own bedside tables. Good for friends travelling together.</p>
+              <button class="btn btn-ink btn-sm" type="button" data-room="Twin Room">Book this room</button>
+            </div>
+          </article>
+
+          <article class="room">
+            <button class="room-photo" type="button" data-gallery="double" aria-label="View Double Room photo">
+              <img src="assets/img/double-room-sm.jpg" width="900" height="675" loading="lazy" alt="Double Room with a large bed, cream tufted headboard, teal curtains and a louvered wardrobe">
+              <span class="photo-overlay" aria-hidden="true"><span class="po-count"><svg viewBox="0 0 20 20" aria-hidden="true"><rect x="2.5" y="5.5" width="15" height="11" rx="2.5" /><path d="M7 5.5 8.2 3.5h3.6L13 5.5" /><rect x="7.2" y="8.2" width="5.6" height="5.6" rx="2.8" /></svg>View 1 photo</span><span class="po-zoom"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M12 3.5h4.5V8M8 16.5H3.5V12M16.5 3.5 11.5 8.5M3.5 16.5l5-5" /></svg></span></span>
+            </button>
+            <div class="room-body">
+              <div class="room-meta"><span>1 large bed</span><span>Fridge &amp; kettle</span></div>
+              <h3>Double Room</h3>
+              <p>A large bed under a tufted headboard, with a mini fridge, kettle and writing table by the window.</p>
+              <button class="btn btn-ink btn-sm" type="button" data-room="Double Room">Book this room</button>
+            </div>
+          </article>
+
+          <article class="room">
+            <button class="room-photo" type="button" data-gallery="queen" aria-label="View Queen Room photo">
+              <img src="assets/img/queen-room-sm.jpg" width="900" height="675" loading="lazy" alt="Queen Room with a carved hardwood bed, dresser with mirror and a framed floral painting">
+              <span class="photo-overlay" aria-hidden="true"><span class="po-count"><svg viewBox="0 0 20 20" aria-hidden="true"><rect x="2.5" y="5.5" width="15" height="11" rx="2.5" /><path d="M7 5.5 8.2 3.5h3.6L13 5.5" /><rect x="7.2" y="8.2" width="5.6" height="5.6" rx="2.8" /></svg>View 1 photo</span><span class="po-zoom"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M12 3.5h4.5V8M8 16.5H3.5V12M16.5 3.5 11.5 8.5M3.5 16.5l5-5" /></svg></span></span>
+            </button>
+            <div class="room-body">
+              <div class="room-meta"><span>1 large bed</span><span>Dresser</span></div>
+              <h3>Queen Room</h3>
+              <p>A carved hardwood bed, warm wall lamps and a dresser with mirror.</p>
+              <button class="btn btn-ink btn-sm" type="button" data-room="Queen Room">Book this room</button>
+            </div>
+          </article>
+
+          <article class="room">
+            <button class="room-photo" type="button" data-gallery="single" aria-label="View Single Room photo">
+              <img src="assets/img/single-room-sm.jpg" width="900" height="675" loading="lazy" alt="Single Room with a wooden daybed, satin pillows, coffee corner and mini fridge">
+              <span class="photo-overlay" aria-hidden="true"><span class="po-count"><svg viewBox="0 0 20 20" aria-hidden="true"><rect x="2.5" y="5.5" width="15" height="11" rx="2.5" /><path d="M7 5.5 8.2 3.5h3.6L13 5.5" /><rect x="7.2" y="8.2" width="5.6" height="5.6" rx="2.8" /></svg>View 1 photo</span><span class="po-zoom"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M12 3.5h4.5V8M8 16.5H3.5V12M16.5 3.5 11.5 8.5M3.5 16.5l5-5" /></svg></span></span>
+            </button>
+            <div class="room-body">
+              <div class="room-meta"><span>1 single bed</span><span>Coffee corner</span></div>
+              <h3>Single Room</h3>
+              <p>A wooden daybed, a coffee corner and a mini fridge, sized for one.</p>
+              <button class="btn btn-ink btn-sm" type="button" data-room="Single Room">Book this room</button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- BOOKING -->
+    <section class="booking" id="book" aria-labelledby="book-title">
+      <div class="container booking-grid">
+        <div class="booking-intro">
+          <h2 id="book-title">Request your stay</h2>
+          <p>Fill this in and we'll prepare a message for you to send by email or text. We reply to confirm availability and the rate for your dates.</p>
+          <ol class="steps">
+            <li><span>1</span>Choose dates and room</li>
+            <li><span>2</span>Review your request</li>
+            <li><span>3</span>Send by email or SMS</li>
+          </ol>
+          <p class="small muted">Nothing is charged here. Your booking is confirmed only when we reply.</p>
+        </div>
+
+        <div class="booking-card">
+          <form class="book-form" id="book-form" novalidate>
+            <div class="row two">
+              <div class="field">
+                <label for="f-in">Check-in</label>
+                <input type="date" id="f-in" name="checkin" required>
+              </div>
+              <div class="field">
+                <label for="f-out">Check-out</label>
+                <input type="date" id="f-out" name="checkout" required>
+              </div>
+            </div>
+            <p class="nights" id="nights" aria-live="polite">Pick your dates to see the number of nights.</p>
+
+            <div class="avail" id="avail">
+              <div class="avail-head">
+                <h3 class="avail-title" id="avail-title">Available tonight</h3>
+                <span class="avail-legend" aria-hidden="true"><i class="dot is-free"></i>Free <i class="dot is-booked"></i>Booked</span>
+              </div>
+              <ul class="avail-list" id="avail-list" aria-live="polite" aria-labelledby="avail-title"></ul>
+            </div>
+
+            <div class="row three">
+              <div class="field">
+                <label for="f-room">Room</label>
+                <select id="f-room" name="room" required>
+                  <option value="">Choose a room</option>
+                  <option value="Twin Room">Twin Room</option>
+                  <option value="Double Room">Double Room</option>
+                  <option value="Queen Room">Queen Room</option>
+                  <option value="Single Room">Single Room</option>
+                  <option value="Not sure yet, please advise">Not sure yet, please advise</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="f-adults">Adults</label>
+                <input type="number" id="f-adults" name="adults" min="1" max="20" value="2" inputmode="numeric" required>
+              </div>
+              <div class="field">
+                <label for="f-kids">Children</label>
+                <input type="number" id="f-kids" name="children" min="0" max="20" value="0" inputmode="numeric">
+              </div>
+            </div>
+
+            <div class="row two">
+              <div class="field">
+                <label for="f-name">Full name</label>
+                <input type="text" id="f-name" name="name" autocomplete="name" required>
+              </div>
+              <div class="field">
+                <label for="f-phone">Mobile number</label>
+                <input type="tel" id="f-phone" name="phone" autocomplete="tel" placeholder="09XX XXX XXXX" required>
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="f-email">Email <span class="opt">(optional)</span></label>
+              <input type="email" id="f-email" name="email" autocomplete="email">
+            </div>
+
+            <div class="field">
+              <label for="f-arrival">Estimated arrival time <span class="opt">(optional)</span></label>
+              <input type="time" id="f-arrival" name="arrival">
+            </div>
+
+            <div class="field">
+              <label for="f-notes">Requests <span class="opt">(optional)</span></label>
+              <textarea id="f-notes" name="notes" rows="3" placeholder="Airport pickup question, extra towels, late arrival…"></textarea>
+            </div>
+
+            <p class="form-error" id="form-error" role="alert" tabindex="-1"></p>
+            <button class="btn btn-ink btn-block" type="submit">Review my request</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- DINING -->
+    <section class="dining" id="dining" aria-labelledby="dining-title">
+      <div class="container dining-grid">
+        <div class="dining-photo">
+          <img src="assets/img/dining-boardwalk.jpg" width="900" height="700" loading="lazy" alt="Bamboo boardwalk leading to a large nipa hut over the water at the Balinsasayaw restaurant">
+          <span class="photo-caption" aria-hidden="true"><strong>Balinsasayaw</strong>Nipa huts over the water</span>
+        </div>
+        <div class="dining-copy">
+          <h2 id="dining-title">Dinner over the water</h2>
+          <p>The Guesthouse comes from Balinsasayaw, the restaurant where nipa-roofed huts stand on stilts above the water. Walk the bamboo boardwalk, take a hut, and make an evening of it.</p>
+          <dl class="facts">
+            <div><dt>Setting</dt><dd>Nipa huts on stilts</dd></div>
+            <div><dt>Getting there</dt><dd>Bamboo boardwalk</dd></div>
+          </dl>
+          <a class="btn btn-ink" href="tel:+639998846076">Ask about dining</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section class="gallery" id="gallery" aria-labelledby="gallery-title">
+      <div class="gallery-pin">
+        <div class="container section-head split gallery-head">
+          <div>
+            <h2 id="gallery-title">Look around</h2>
+            <p>The rooms, the boardwalk and the huts over the water.</p>
+          </div>
+          <div class="gallery-progress" aria-hidden="true">
+            <span class="gp-count"><span id="gp-now">01</span> / 07</span>
+            <span class="gp-bar"><span id="gp-fill"></span></span>
+          </div>
+          <div class="gallery-nav">
+            <button class="round-btn" type="button" data-scroll="-1" aria-label="Previous photos"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M16 10H4M9 5l-5 5 5 5" /></svg></button>
+            <button class="round-btn" type="button" data-scroll="1" aria-label="Next photos"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h12M11 5l5 5-5 5" /></svg></button>
+          </div>
+        </div>
+        <div class="gallery-viewport" id="gallery-viewport">
+          <div class="gallery-track" id="gallery-track" aria-label="Photo gallery">
+            <button class="g-item" type="button" data-index="0"><img src="assets/img/hero-balinsasayaw.jpg" width="1606" height="876" alt="Nipa huts over the water at Balinsasayaw"><span class="g-cap" aria-hidden="true">Nipa huts over the water at Balinsasayaw</span></button>
+            <button class="g-item" type="button" data-index="1"><img src="assets/img/twin-room-sm.jpg" width="900" height="675" alt="Twin Room, front view"><span class="g-cap" aria-hidden="true">Twin Room, front view</span></button>
+            <button class="g-item" type="button" data-index="2"><img src="assets/img/double-room-sm.jpg" width="900" height="675" alt="Double Room with teal curtains"><span class="g-cap" aria-hidden="true">Double Room with teal curtains</span></button>
+            <button class="g-item" type="button" data-index="3"><img src="assets/img/queen-room-sm.jpg" width="900" height="675" alt="Queen Room with hardwood bed"><span class="g-cap" aria-hidden="true">Queen Room with hardwood bed</span></button>
+            <button class="g-item" type="button" data-index="4"><img src="assets/img/twin-room-lamps-sm.jpg" width="900" height="675" alt="Twin Room with rattan lamps and painted art"><span class="g-cap" aria-hidden="true">Twin Room with rattan lamps and painted art</span></button>
+            <button class="g-item" type="button" data-index="5"><img src="assets/img/single-room-sm.jpg" width="900" height="675" alt="Single Room with wooden daybed"><span class="g-cap" aria-hidden="true">Single Room with wooden daybed</span></button>
+            <button class="g-item" type="button" data-index="6"><img src="assets/img/twin-room-2-sm.jpg" width="900" height="675" alt="Twin Room, side view"><span class="g-cap" aria-hidden="true">Twin Room, side view</span></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LOCATION -->
+    <section class="location" id="location" aria-labelledby="loc-title">
+      <div class="container loc-grid">
+        <div class="loc-copy">
+          <h2 id="loc-title">Find us</h2>
+          <address>
+            PEO Road, Bancao-Bancao<br>
+            Puerto Princesa City<br>
+            Palawan 5300, Philippines
+          </address>
+          <div class="loc-actions">
+            <a class="btn btn-ink btn-sm" href="https://www.google.com/maps/dir/?api=1&amp;destination=PEO+Road+Bancao-Bancao+Puerto+Princesa+City+Palawan" target="_blank" rel="noopener">Get directions</a>
+            <button class="btn btn-line btn-sm" type="button" id="copy-address">Copy address</button>
+          </div>
+        </div>
+        <div class="map">
+          <iframe title="Map of PEO Road, Bancao-Bancao, Puerto Princesa City"
+                  src="https://www.google.com/maps?q=PEO+Road,+Bancao-Bancao,+Puerto+Princesa+City,+Palawan&amp;output=embed"
+                  loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact" id="contact" aria-labelledby="contact-title">
+      <div class="container">
+        <h2 id="contact-title">Questions before you book?</h2>
+        <p>Call, text or email. We're happy to help with your Palawan plans.</p>
+        <a class="btn btn-ink contact-book" href="#book">Book a stay</a>
+        <div class="contact-links">
+          <a class="contact-pill" href="tel:+639998846076">
+            <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 2.5h2.5l1.5 4-2 1.25a9 9 0 0 0 5.25 5.25L13.5 11l4 1.5V15a2 2 0 0 1-2 2A13.5 13.5 0 0 1 3 4.5a2 2 0 0 1 2-2Z" /></svg>
+            0999 884 6076</a>
+          <a class="contact-pill" href="sms:+639998846076">
+            <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 5.5A2.5 2.5 0 0 1 5.5 3h9A2.5 2.5 0 0 1 17 5.5v6a2.5 2.5 0 0 1-2.5 2.5H9l-4 3v-3h0.5A2.5 2.5 0 0 1 3 11.5Z" /></svg>
+            Send a text</a>
+          <a class="contact-pill" href="mailto:theguesthouse.balinsasayaw2026@gmail.com">
+            <svg viewBox="0 0 20 20" aria-hidden="true"><rect x="2.5" y="4.5" width="15" height="11" rx="2" /><path d="m3 5.5 7 5.5 7-5.5" /></svg>
+            <span class="email-text">theguesthouse.balinsasayaw2026@gmail.com</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="brand brand-footer">
+        <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><path d="M3 16 16 5l13 11" /><path d="M7 14v12h18V14" /><path d="M13 26v-6h6v6" /></svg>
+        <span class="brand-text"><strong>The Guesthouse</strong><small>by Balinsasayaw</small></span>
+      </div>
+      <p>PEO Road, Bancao-Bancao, Puerto Princesa City, Palawan 5300</p>
+      <p>© <span id="year">2026</span> The Guesthouse by Balinsasayaw</p>
+      <a class="to-top" href="#top">Back to top</a>
+    </div>
+  </footer>
+
+  <!-- Mobile sticky book bar -->
+  <a class="mobile-book" href="#book">Book a stay</a>
+
+  <!-- Booking summary modal -->
+  <dialog class="modal" id="summary-modal" aria-labelledby="summary-title">
+    <div class="summary" id="summary">
+      <div class="modal-head">
+        <div>
+          <h3 id="summary-title">Your booking request</h3>
+          <p class="ref">Reference <strong id="s-ref"></strong></p>
+        </div>
+        <button class="round-btn modal-close" type="button" aria-label="Close"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 5l10 10M15 5 5 15" /></svg></button>
+      </div>
+      <div class="modal-body">
+        <dl class="summary-list" id="summary-list"></dl>
+        <p class="modal-note">Tap a button below. Your email or messaging app opens with the request already written. Just press send. Nothing is charged; we reply to confirm.</p>
+      </div>
+      <div class="modal-foot">
+        <div class="send-actions">
+          <a class="btn btn-ink" id="send-email" href="#">
+            <svg viewBox="0 0 20 20" aria-hidden="true"><rect x="2.5" y="4.5" width="15" height="11" rx="2" /><path d="m3 5.5 7 5.5 7-5.5" /></svg>
+            Send by email</a>
+          <a class="btn btn-line" id="send-sms" href="#">
+            <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 5.5A2.5 2.5 0 0 1 5.5 3h9A2.5 2.5 0 0 1 17 5.5v6a2.5 2.5 0 0 1-2.5 2.5H9l-4 3v-3h0.5A2.5 2.5 0 0 1 3 11.5Z" /></svg>
+            Send by SMS</a>
+          <button class="btn btn-line" id="copy-req" type="button">
+            <svg viewBox="0 0 20 20" aria-hidden="true"><rect x="6.5" y="6.5" width="10" height="10" rx="2" /><path d="M13.5 6.5V5A1.5 1.5 0 0 0 12 3.5H5A1.5 1.5 0 0 0 3.5 5v7A1.5 1.5 0 0 0 5 13.5h1.5" /></svg>
+            <span>Copy details</span></button>
+        </div>
+        <button class="text-btn" id="edit-req" type="button">Edit request</button>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- Lightbox -->
+  <dialog class="lightbox" id="lightbox" aria-label="Photo viewer">
+    <figure>
+      <img id="lb-img" alt="">
+      <figcaption id="lb-cap"></figcaption>
+    </figure>
+    <button class="lb-close round-btn" type="button" aria-label="Close photo viewer"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 5l10 10M15 5 5 15" /></svg></button>
+    <button class="lb-prev round-btn" type="button" aria-label="Previous photo"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M16 10H4M9 5l-5 5 5 5" /></svg></button>
+    <button class="lb-next round-btn" type="button" aria-label="Next photo"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h12M11 5l5 5-5 5" /></svg></button>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>
