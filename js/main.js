@@ -230,10 +230,10 @@
       li.innerHTML =
         '<img src="' + room.img + '" alt="" width="56" height="56" loading="lazy">' +
         '<div class="ai-main"><span class="ai-name">' + room.name + '</span>' +
-        '<span class="ai-status">' + status + "</span>" +
-        '<div class="ai-days" aria-hidden="true">' + days + "</div></div>" +
+        '<span class="ai-status">' + status + "</span></div>" +
         '<button type="button" class="btn ' + (fRoom.value === room.name ? "btn-ink" : "btn-line") + '" data-pick="' + room.name + '"' +
-        (free ? "" : " disabled") + ">" + (free ? (fRoom.value === room.name ? "Selected" : "Select") : "Unavailable") + "</button>";
+        (free ? "" : " disabled") + ">" + (free ? (fRoom.value === room.name ? "Selected" : "Select") : "Unavailable") + "</button>" +
+        '<div class="ai-days" aria-hidden="true">' + days + "</div>";
       availList.appendChild(li);
     });
 
@@ -261,7 +261,7 @@
       var badge = meta.querySelector(".room-status");
       if (!badge) { badge = document.createElement("span"); meta.insertBefore(badge, meta.firstChild); }
       badge.className = "room-status " + (free ? "is-free" : "is-booked");
-      badge.textContent = free ? (r.chosen ? "Free on your dates" : "Free tonight") : (r.chosen ? "Booked on your dates" : "Booked tonight");
+      badge.innerHTML = (free ? "Free" : "Booked") + '<span class="rs-when"> ' + (r.chosen ? "on your dates" : "tonight") + "</span>";
     });
   }
 

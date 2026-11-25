@@ -27,7 +27,7 @@
 *, *::before, *::after { box-sizing: border-box; }
 [hidden] { display: none !important; }
 
-html { scroll-behavior: smooth; scroll-padding-top: calc(var(--header-h) + 12px); -webkit-text-size-adjust: 100%; }
+html { scroll-behavior: smooth; scroll-padding-top: calc(var(--header-h) + 12px); -webkit-text-size-adjust: 100%; -webkit-tap-highlight-color: transparent; }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 
 body {
@@ -108,7 +108,7 @@ svg path, svg rect { fill: none; stroke: currentColor; stroke-width: 1.6; stroke
 /* ---------- Header ---------- */
 .site-header {
   position: fixed; inset: 0 0 auto; z-index: 50;
-  padding: 12px var(--gutter) 0;
+  padding: max(12px, env(safe-area-inset-top)) max(var(--gutter), env(safe-area-inset-right)) 0 max(var(--gutter), env(safe-area-inset-left));
   transition: transform .4s var(--ease);
 }
 .header-inner {
@@ -225,7 +225,7 @@ svg path, svg rect { fill: none; stroke: currentColor; stroke-width: 1.6; stroke
   position: relative;
 }
 .qb-field {
-  display: grid; padding: 6px 18px; border-radius: 999px; cursor: pointer;
+  display: grid; min-width: 0; padding: 6px 18px; border-radius: 999px; cursor: pointer;
   transition: background-color .2s;
 }
 .qb-field:hover, .qb-field:focus-within { background: var(--sky-mist); }
@@ -233,7 +233,7 @@ svg path, svg rect { fill: none; stroke: currentColor; stroke-width: 1.6; stroke
 .qb-field span { font-size: .72rem; font-weight: 500; color: var(--muted); letter-spacing: .01em; }
 .qb-field input, .qb-field select {
   border: 0; background: none; padding: 0; min-height: 26px; font-size: .95rem; font-weight: 500;
-  width: 100%; outline: none; appearance: none; -webkit-appearance: none; cursor: pointer;
+  width: 100%; min-width: 0; outline: none; appearance: none; -webkit-appearance: none; cursor: pointer;
 }
 .qb-field input::-webkit-calendar-picker-indicator { opacity: .55; cursor: pointer; }
 .qb-submit { min-height: 56px; padding: 0 26px; }
@@ -498,15 +498,17 @@ svg path, svg rect { fill: none; stroke: currentColor; stroke-width: 1.6; stroke
 .dot.is-booked { background: #f3d9d6; border: 1px solid #d9a29c; margin-left: 8px; }
 .avail-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
 .avail-item {
-  display: grid; grid-template-columns: 56px 1fr auto; gap: 12px; align-items: center;
+  display: grid; grid-template-columns: 56px minmax(0, 1fr) auto; gap: 4px 12px; align-items: center;
+  grid-template-areas: "img main btn" "img days btn";
   padding: 8px 8px 8px 8px; border-radius: 16px; background: var(--sky-mist);
   transition: background-color .3s var(--ease), opacity .3s var(--ease);
 }
 .avail-item.is-picked { background: var(--sky-soft); box-shadow: inset 0 0 0 1.5px var(--sky); }
 .avail-item.is-booked { background: #fbf4f3; }
-.avail-item img { width: 56px; height: 56px; border-radius: 12px; object-fit: cover; }
+.avail-item img { grid-area: img; width: 56px; height: 56px; border-radius: 12px; object-fit: cover; }
 .avail-item.is-booked img { filter: grayscale(.7); opacity: .75; }
-.ai-main { min-width: 0; display: grid; gap: 4px; }
+.ai-main { grid-area: main; min-width: 0; display: grid; gap: 4px; }
+.avail-item .btn { grid-area: btn; }
 .ai-name { font-weight: 600; font-size: .95rem; line-height: 1.2; }
 .ai-status { display: inline-flex; align-items: center; gap: 6px; font-size: .8rem; font-weight: 500; line-height: 1.3; }
 .ai-status::before { content: ""; width: 7px; height: 7px; border-radius: 50%; flex: none; }
@@ -514,7 +516,7 @@ svg path, svg rect { fill: none; stroke: currentColor; stroke-width: 1.6; stroke
 .is-free .ai-status::before { background: #2f9e64; }
 .is-booked .ai-status { color: var(--danger); }
 .is-booked .ai-status::before { background: var(--danger); }
-.ai-days { display: flex; gap: 3px; margin-top: 2px; }
+.ai-days { grid-area: days; display: flex; flex-wrap: wrap; gap: 3px; margin-top: 2px; }
 .ai-days span {
   display: grid; place-items: center; width: 22px; height: 22px; border-radius: 6px;
   font-size: .68rem; font-weight: 500; font-variant-numeric: tabular-nums;
@@ -724,11 +726,11 @@ svg path, svg rect { fill: none; stroke: currentColor; stroke-width: 1.6; stroke
   .row.three .field:first-child { grid-column: 1 / -1; }
   .summary-list > div { grid-template-columns: 1fr; gap: 2px; }
   .avail { padding: 12px; gap: 10px; }
-  .avail-item { grid-template-columns: 1fr auto; gap: 8px; padding: 10px 10px 10px 12px; }
+  .avail-item { grid-template-columns: minmax(0, 1fr) auto; grid-template-areas: "main btn" "days days"; gap: 8px; padding: 10px 10px 10px 12px; }
   .avail-item img { display: none; }
   .avail-item .btn { min-height: 36px; padding: 0 12px; font-size: .8rem; }
   .ai-days { gap: 2px; }
-  .ai-days span { width: 19px; height: 19px; font-size: .62rem; border-radius: 5px; }
+  .ai-days span { width: 24px; height: 24px; font-size: .72rem; border-radius: 6px; }
   .site-footer { padding-bottom: 96px; }
 }
 
@@ -766,4 +768,71 @@ svg path, svg rect { fill: none; stroke: currentColor; stroke-width: 1.6; stroke
   .lb-prev, .lb-next { top: auto; bottom: 16px; transform: none; }
   .lb-prev { left: calc(50% - 52px); }
   .lb-next { right: calc(50% - 52px); }
+}
+
+
+/* ---------- Small iPhones: SE (320), 8 / SE 2-3 / mini (375), 12-15 (390), Plus (414) ---------- */
+@media (max-width: 430px) {
+  :root { --gutter: 16px; --section: 64px; }
+
+  /* iOS zooms any input under 16px; keep every field at 16px */
+  .qb-field input, .qb-field select { font-size: 1rem; }
+  input[type="date"], input[type="time"] { -webkit-appearance: none; appearance: none; min-height: 48px; text-align: left; }
+  .qb-field input[type="date"] { min-height: 26px; }
+  input::-webkit-date-and-time-value { text-align: left; }
+
+  /* trim what repeats on a phone */
+  .tag, .rooms .link-arrow, .explore { display: none; }
+  .about { padding-top: 40px; }
+  .hero-frame { min-height: auto; padding-bottom: 64px; }
+  .hero-copy p { max-width: 30ch; margin-inline: auto; }
+
+  /* amenities: tidy two-column list, icon beside label */
+  .amenities { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 12px; margin-top: 36px; }
+  .amenities li { display: flex; align-items: center; justify-content: flex-start; text-align: left; gap: 10px; font-size: .85rem; line-height: 1.3; }
+  .amenities li:last-child:nth-child(odd) { grid-column: 1 / -1; }
+  .amenity-icon, .amenity-icon svg { width: 28px; height: 28px; flex: none; }
+
+  /* room rows */
+  .room { gap: 12px; }
+  .room-photo { width: 104px; }
+  .room-photo .room-status { font-size: .72rem; padding: 2px 8px; top: 6px; left: 6px; white-space: nowrap; }
+  .room-photo .rs-when, .room-photo .photo-overlay { display: none; }
+  .room-photo::after { background: linear-gradient(to bottom, rgba(8, 22, 36, .25), rgba(8, 22, 36, 0) 40%); }
+  .room h3 { font-size: 1.05rem; }
+  .room .btn { padding: 0 14px; font-size: .85rem; }
+
+  /* booking */
+  .booking-intro p:not(.small) { font-size: .95rem; }
+  .booking-card { padding: 16px 14px; }
+  .avail { padding: 10px; }
+  .avail-head { gap: 6px; }
+  .ai-status { font-size: .78rem; }
+
+  /* gallery + dining */
+  .g-item { width: 78vw; }
+  .dining-photo { max-width: none; }
+  .facts { flex-direction: row; gap: 24px; }
+
+  /* contact */
+  .email-text { font-size: .78rem; overflow-wrap: normal; word-break: normal; }
+  .contact-pill { min-height: 48px; }
+  .to-top { display: inline-block; padding: 10px 0; }
+}
+
+@media (max-width: 360px) {
+  .brand-text strong { font-size: .92rem; }
+  .brand-mark { width: 24px; height: 24px; }
+  .hero-copy h1 { font-size: 2rem; }
+  .hero-copy p { font-size: .95rem; }
+  .quickbook { padding: 6px; }
+  .qb-field { padding: 8px 10px; }
+  .qb-field input::-webkit-calendar-picker-indicator { display: none; }
+  .room-photo { width: 92px; }
+  .room .btn { padding: 0 12px; }
+  .ai-days span { width: 22px; height: 22px; }
+  .avail-item .btn { padding: 0 10px; }
+  .send-actions .btn, .loc-actions .btn { flex: 1 1 100%; }
+  .email-text { font-size: .72rem; }
+  .contact-pill { padding: 0 12px; gap: 8px; }
 }
