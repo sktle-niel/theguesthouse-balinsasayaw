@@ -56,6 +56,8 @@ Clean URLs such as `/rooms` require the `.htaccess` rules, so they work on the l
 
 The site must sit at the domain root for the clean URLs to resolve.
 
+**Cache busting:** Hostinger's CDN caches CSS and JS for 7 days. After changing `css/style.css` or `js/main.js`, bump the `?v=` value on their `<link>` and `<script>` tags in `index.html` and upload `index.html` too. HTML is not cached, so visitors get the new files immediately.
+
 ## Room availability data
 
 Availability currently uses **sample data** for demonstration. It is defined in `js/main.js` (`ROOMS` and `BOOKED`):
